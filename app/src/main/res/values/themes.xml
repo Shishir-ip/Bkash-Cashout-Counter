@@ -5,4 +5,11 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">false</item>
     </style>
+
+    <!-- Translucent host for the widget input sheet: launcher stays visible behind -->
+    <style name="Theme.WidgetInput" parent="Theme.CashoutCounter">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
 </resources>

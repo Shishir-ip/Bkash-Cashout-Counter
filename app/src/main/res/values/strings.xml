@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Cashout Counter</string>
+    <string name="widget_balance_label">Cashout · Balance → Cash</string>
+    <string name="widget_charge_label">Cashout · Cash Out → Total</string>
+    <string name="widget_balance_description">See how much cash you receive from your balance after the cash out charge</string>
+    <string name="widget_charge_description">See the total deduction for the amount you want to cash out</string>
 </resources>

@@ -5,6 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.shishir.cashoutcounter.data.RateStore
 import com.shishir.cashoutcounter.model.ChargeRate
+import com.shishir.cashoutcounter.widget.WidgetViews
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -49,6 +50,8 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
             val updated = transform(_rates.value)
             _rates.value = updated
             store.save(updated)
+            // Any rate change instantly re-renders every home-screen widget.
+            WidgetViews.updateAll(getApplication())
         }
     }
 }

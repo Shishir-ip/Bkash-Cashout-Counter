@@ -267,6 +267,7 @@ fun IosFilledButton(
     )
     Box(
         modifier = modifier
+            .fillMaxWidth()
             .graphicsLayer {
                 scaleX = scale
                 scaleY = scale

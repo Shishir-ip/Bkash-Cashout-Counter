@@ -27,11 +27,28 @@ Calculate mobile banking cash out charges instantly — or find out exactly how 
 
 It ships with the most-used rates in Bangladesh (bKash Priyo/ATM **13.95৳**, bKash Agent **18.50৳**, Nagad Regular **12.99৳**, Nagad Islamic **15৳** per 1,000) and every rate is **editable** — add your own bank or MFS rate and reuse it forever.
 
+## 🏠 Home screen widgets
+
+Keep the math one glance away — add **two different widgets** to your launcher:
+
+| Widget | Answers | Example |
+|---|---|---|
+| **Balance → Cash** | *"I have this balance — how much cash do I get?"* | Balance ৳10,000 @ 13.95৳/1000 → **৳9,860.50** |
+| **Cash Out → Total** | *"I want this much cash — what's deducted?"* | Cash out ৳1,000 @ 13.95৳/1000 → **৳1,013.95** |
+
+**How they work**
+
+1. Add from your launcher's widget picker, or tap **＋ Balance / ＋ Charge** on the app's About tab for a one-tap system pin dialog.
+2. Tap the widget → a bottom-sheet input slides over your home screen (the app never opens).
+3. Type the amount, swipe through charge rates with ‹ › arrows, or use the **+100 / +500 / +1,000** quick chips → **Save to Widget**.
+4. The widget instantly shows the big result with the breakdown in its footer. Every widget instance remembers its own amount and rate.
+5. Edit a rate inside the app and **every widget re-renders automatically**.
+
 ## 📥 Download
 
 Grab the latest **signed APK** from [GitHub Releases](https://github.com/Shishir-ip/Bkash-Cashout-Counter/releases/latest):
 
-1. Download `Cashout-Counter-v1.0.0.apk`
+1. Download `Cashout-Counter-v1.1.0.apk`
 2. Open it on your phone (Android 7.0 / API 24 or newer)
 3. Allow *"Install from unknown sources"* if asked — that's it. No permissions, no ads, no tracking.
 
@@ -40,6 +57,7 @@ Grab the latest **signed APK** from [GitHub Releases](https://github.com/Shishir
 | | |
 |---|---|
 | 🧮 **Two calculators in one** | *Balance* → how much cash you receive after charges. *Charge* → total deduction for the amount you want to cash out. |
+| 🏠 **Home screen widgets** | Two glanceable widgets — *Balance → Cash* and *Cash Out → Total*. Tap, type, done: **no need to open the app**. |
 | ⚡ **Live results** | Results update as you type — no Calculate button needed. |
 | ✏️ **Editable & custom rates** | Add, edit or delete any charge rate. Perfect for bank apps, agent rates, or new MFS services. |
 | 🔄 **Reset to defaults** | One tap restores the built-in bKash & Nagad rates. |
@@ -79,6 +97,8 @@ The same formulas power the original [web version](https://github.com/Shishir-ip
 | ![Balance mode calculator](docs/screenshots/counter.png) | ![Charge mode calculator](docs/screenshots/charge.png) |
 | **Rates manager** | **About** |
 | ![Rates manager](docs/screenshots/rates.png) | ![About screen](docs/screenshots/about.png) |
+| **Home screen widgets** | **Widget input sheet** |
+| ![Home screen widgets](docs/screenshots/widgets.png) | ![Widget input sheet](docs/screenshots/widget_input.png) |
 
 ## 🛠 Build from source
 
@@ -114,6 +134,7 @@ Then run `./gradlew :app:assembleRelease` — the signed APK lands in `app/build
 
 - **Kotlin 2.0** + **Jetpack Compose** (Material 3, customized to a Cupertino design language)
 - MVVM with `StateFlow`; rates persisted locally via `SharedPreferences`
+- **App Widgets** built with classic `RemoteViews` + a translucent Compose input sheet
 - Pure-Kotlin calculation core, covered by JVM unit tests
 - R8 code & resource shrinking for the release build
 - Min SDK 24 (Android 7.0) · Target SDK 34 (Android 14)

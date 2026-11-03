@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -43,11 +44,14 @@ import com.shishir.cashoutcounter.ui.components.CardDivider
 import com.shishir.cashoutcounter.ui.components.IosCard
 import com.shishir.cashoutcounter.ui.components.clickableNoIndication
 import com.shishir.cashoutcounter.ui.theme.AppBackground
+import com.shishir.cashoutcounter.ui.theme.BkashPink
 import com.shishir.cashoutcounter.ui.theme.BkashPinkLight
 import com.shishir.cashoutcounter.ui.theme.FacebookBlue
 import com.shishir.cashoutcounter.ui.theme.LabelPrimary
 import com.shishir.cashoutcounter.ui.theme.LabelSecondary
 import com.shishir.cashoutcounter.ui.theme.LabelTertiary
+import com.shishir.cashoutcounter.widget.WidgetContract
+import com.shishir.cashoutcounter.widget.WidgetPinner
 
 private const val URL_GITHUB_PROFILE = "https://github.com/Shishir-ip"
 private const val URL_GITHUB_PROJECT = "https://github.com/Shishir-ip/Bkash-Cashout-Counter"
@@ -133,6 +137,59 @@ fun AboutScreen() {
                 CardDivider(Modifier.padding(start = 52.dp))
                 LinkRow(Icons.Filled.Language, "Web Version", LabelPrimary) {
                     context.openUrl(URL_WEB_VERSION)
+                }
+            }
+            Spacer(Modifier.height(12.dp))
+
+            // ── Home screen widgets ──
+            IosCard {
+                Text(
+                    text = "Home Screen Widgets",
+                    style = MaterialTheme.typography.titleMedium,
+                    color = LabelPrimary,
+                )
+                Spacer(Modifier.height(4.dp))
+                Text(
+                    text = "Count right from your home screen — tap the widget, type the amount, done.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = LabelSecondary,
+                )
+                Spacer(Modifier.height(12.dp))
+                Row(horizontalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(10.dp)) {
+                    Box(
+                        modifier = Modifier
+                            .weight(1f)
+                            .clip(RoundedCornerShape(12.dp))
+                            .background(BkashPink.copy(alpha = 0.14f))
+                            .clickableNoIndication {
+                                WidgetPinner.requestPin(context, WidgetContract.MODE_BALANCE)
+                            }
+                            .padding(vertical = 12.dp),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Text(
+                            text = "＋ Balance",
+                            style = MaterialTheme.typography.titleSmall,
+                            color = BkashPinkLight,
+                        )
+                    }
+                    Box(
+                        modifier = Modifier
+                            .weight(1f)
+                            .clip(RoundedCornerShape(12.dp))
+                            .background(BkashPink.copy(alpha = 0.14f))
+                            .clickableNoIndication {
+                                WidgetPinner.requestPin(context, WidgetContract.MODE_CHARGE)
+                            }
+                            .padding(vertical = 12.dp),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Text(
+                            text = "＋ Charge",
+                            style = MaterialTheme.typography.titleSmall,
+                            color = BkashPinkLight,
+                        )
+                    }
                 }
             }
             Spacer(Modifier.height(12.dp))
