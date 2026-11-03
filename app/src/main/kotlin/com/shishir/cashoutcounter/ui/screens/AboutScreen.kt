@@ -22,8 +22,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.Facebook
-import androidx.compose.material.icons.filled.GitHub
 import androidx.compose.material.icons.filled.Language
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -79,7 +79,7 @@ fun AboutScreen() {
         ) {
             Spacer(Modifier.height(24.dp))
             Image(
-                painter = painterResource(R.mipmap.ic_launcher),
+                painter = painterResource(R.drawable.ic_app_logo),
                 contentDescription = "Cashout Counter app icon",
                 modifier = Modifier
                     .size(88.dp)
@@ -119,7 +119,7 @@ fun AboutScreen() {
 
             // ── Links ──
             IosCard(contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp)) {
-                LinkRow(Icons.Filled.GitHub, "GitHub Profile", LabelPrimary) {
+                LinkRow(Icons.Filled.Person, "GitHub Profile", LabelPrimary) {
                     context.openUrl(URL_GITHUB_PROFILE)
                 }
                 CardDivider(Modifier.padding(start = 52.dp))

@@ -22,7 +22,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.Copy
+import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -327,7 +327,7 @@ private fun ResultCard(
             SectionLabel(emoji = "🧾", title = "Result")
             Spacer(Modifier.weight(1f))
             RoundIconButton(
-                icon = if (copied) Icons.Filled.Check else Icons.Filled.Copy,
+                icon = if (copied) Icons.Filled.Check else Icons.Filled.ContentCopy,
                 contentDescription = if (copied) "Copied" else "Copy result",
                 tint = if (copied) Color(0xFF30D158) else LabelSecondary,
                 onClick = {

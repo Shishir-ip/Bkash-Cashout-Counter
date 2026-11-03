@@ -74,9 +74,11 @@ The same formulas power the original [web version](https://github.com/Shishir-ip
 
 ## 📱 Screenshots
 
-| Counter | Rates | About |
-|---|---|---|
-| ![Counter screen](docs/screenshots/counter.png) | ![Rates screen](docs/screenshots/rates.png) | ![About screen](docs/screenshots/about.png) |
+| Balance mode | Charge mode |
+|:---:|:---:|
+| ![Balance mode calculator](docs/screenshots/counter.png) | ![Charge mode calculator](docs/screenshots/charge.png) |
+| **Rates manager** | **About** |
+| ![Rates manager](docs/screenshots/rates.png) | ![About screen](docs/screenshots/about.png) |
 
 ## 🛠 Build from source
 

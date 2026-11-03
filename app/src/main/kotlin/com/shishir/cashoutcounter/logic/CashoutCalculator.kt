@@ -70,11 +70,13 @@ object TakaFormatter {
         if (digits.length <= 3) return digits
         val head = digits.dropLast(3)
         val tail = digits.takeLast(3)
-        val twoGroups = head
-            .reversed()
-            .chunked(2)
-            .joinToString(",") { it.reversed() }
-            .reversed()
-        return "$twoGroups,$tail"
+        val groups = mutableListOf<String>()
+        var index = head.length
+        while (index > 2) {
+            groups.add(head.substring(index - 2, index))
+            index -= 2
+        }
+        if (index > 0) groups.add(head.substring(0, index))
+        return groups.asReversed().joinToString(",") + "," + tail
     }
 }

@@ -105,7 +105,11 @@ private fun IosTabBar(
         Modifier
             .fillMaxWidth()
             .background(TabBarDark.copy(alpha = 0.98f))
-            .border(width = 0.5.dp, brush = androidx.compose.ui.graphics.SolidColor(CardBorder)),
+            .border(
+                width = 0.5.dp,
+                brush = androidx.compose.ui.graphics.SolidColor(CardBorder),
+                shape = androidx.compose.ui.graphics.RectangleShape,
+            ),
     ) {
         Row(
             modifier = Modifier

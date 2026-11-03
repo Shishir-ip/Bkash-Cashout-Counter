@@ -33,6 +33,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.composed
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -53,7 +54,7 @@ import com.shishir.cashoutcounter.ui.theme.BkashPinkDark
 import com.shishir.cashoutcounter.ui.theme.BkashPinkLight
 import com.shishir.cashoutcounter.ui.theme.CardBorder
 import com.shishir.cashoutcounter.ui.theme.CardDark
-import com.shashir.cashoutcounter.ui.theme.CardInner
+import com.shishir.cashoutcounter.ui.theme.CardInner
 import com.shishir.cashoutcounter.ui.theme.DestructiveRed
 import com.shishir.cashoutcounter.ui.theme.InterFamily
 import com.shishir.cashoutcounter.ui.theme.LabelPrimary
@@ -273,7 +274,7 @@ fun IosFilledButton(
             .clip(RoundedCornerShape(14.dp))
             .background(
                 if (enabled) Brush.verticalGradient(listOf(BkashPinkLight, BkashPinkDark))
-                else CardInner
+                else SolidColor(CardInner)
             )
             .clickable(
                 interactionSource = interactionSource,
