@@ -9,12 +9,13 @@
 Calculate mobile banking cash out charges instantly — or find out exactly how much cash you can withdraw from your balance. Free, offline, and open source.
 
 [![Release](https://img.shields.io/github/v/release/Shishir-ip/Bkash-Cashout-Counter?color=D12053&label=APK&logo=android)](https://github.com/Shishir-ip/Bkash-Cashout-Counter/releases/latest)
+[![Website](https://img.shields.io/badge/Website-Live-D12053?logo=github)](https://shishir-ip.github.io/Bkash-Cashout-Counter/)
 [![Platform](https://img.shields.io/badge/Platform-Android_7.0%2B-3DDC84?logo=android&logoColor=white)](https://developer.android.com)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.0-7F52FF?logo=kotlin&logoColor=white)](https://kotlinlang.org)
 [![Jetpack Compose](https://img.shields.io/badge/Jetpack_Compose-UI-4285F4?logo=android&logoColor=white)](https://developer.android.com/compose)
 [![License](https://img.shields.io/badge/License-MIT-D12053)](LICENSE)
 
-[📥 Download APK](#-download) · [✨ Features](#-features) · [🧮 How the math works](#-how-the-math-works) · [🛠 Build from source](#-build-from-source)
+[📥 Download APK](#-download) · [🌐 Website](https://shishir-ip.github.io/Bkash-Cashout-Counter/) · [✨ Features](#-features) · [🧮 How the math works](#-how-the-math-works) · [🛠 Build from source](#-build-from-source)
 
 </div>
 
@@ -26,6 +27,10 @@ Calculate mobile banking cash out charges instantly — or find out exactly how 
 - 💸 **"I want to cash out ৳1,000 — how much will be deducted from my account?"** → *Charge mode*
 
 It ships with the most-used rates in Bangladesh (bKash Priyo/ATM **13.95৳**, bKash Agent **18.50৳**, Nagad Regular **12.99৳**, Nagad Islamic **15৳** per 1,000) and every rate is **editable** — add your own bank or MFS rate and reuse it forever.
+
+> 🌐 There's also an SEO-friendly landing page for the app (English & বাংলা) at
+> **[shishir-ip.github.io/Bkash-Cashout-Counter](https://shishir-ip.github.io/Bkash-Cashout-Counter/)** —
+> served from this repo's `/docs` folder via GitHub Pages.
 
 ## 🏠 Home screen widgets
 

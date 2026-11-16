@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ══════════════ PRIMARY SEO ══════════════ -->
+<title>Cashout Counter – bKash & Nagad Cash Out Charge Calculator</title>
+<meta name="description" content="Free Android app to calculate bKash & Nagad cash out charges instantly — balance→cash, cash-out→total, editable rates & home-screen widgets. 100% offline.">
+<meta name="keywords" content="bkash cash out charge calculator, bkash cashout calculator, bkash charge calculator, bkash cash out charge, bkash cash out rate, bkash atm cash out charge 13.95, bkash agent cash out charge 18.50, bkash priyo number cash out, nagad cash out charge calculator, nagad cash out charge, nagad charge 12.99, nagad islamic 15 taka, cash out calculator, cashout counter, cash out counter app, mobile banking charge calculator, mfs charge calculator bangladesh, taka cash out calculator, how much bkash cash out charge, bkash fee calculator, cash out fee calculator, bkash nagad rocket charge, send money cash out charge app, android cash out app bangladesh, bkash charge check app, বিকাশ ক্যাশ আউট চার্জ ক্যালকুলেটর, বিকাশ ক্যাশ আউট চার্জ কত, নগদ ক্যাশ আউট চার্জ, বিকাশ চার্জ হিসাব, ক্যাশ আউট চার্জ ক্যালকুলেটর, বিকাশ এটিএম ক্যাশ আউট চার্জ, বিকাশ এজেন্ট চার্জ">
+<meta name="author" content="Shohidul Islam Shishir">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://shishir-ip.github.io/Bkash-Cashout-Counter/">
+<meta name="theme-color" content="#D12053">
+
+<!-- ══════════════ OPEN GRAPH ══════════════ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cashout Counter">
+<meta property="og:title" content="Cashout Counter – bKash & Nagad Cash Out Charge Calculator">
+<meta property="og:description" content="Calculate bKash & Nagad cash out charges instantly. Balance→cash & cash-out→total, editable rates, home-screen widgets. Free, offline & open source Android app.">
+<meta property="og:url" content="https://shishir-ip.github.io/Bkash-Cashout-Counter/">
+<meta property="og:image" content="https://shishir-ip.github.io/Bkash-Cashout-Counter/og-banner.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="bn_BD">
+
+<!-- ══════════════ TWITTER ══════════════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cashout Counter – bKash & Nagad Cash Out Charge Calculator">
+<meta name="twitter:description" content="Free Android app: calculate bKash & Nagad cash out charges instantly. Editable rates, home-screen widgets, 100% offline.">
+<meta name="twitter:image" content="https://shishir-ip.github.io/Bkash-Cashout-Counter/og-banner.png">
+
+<!-- ══════════════ ICONS ══════════════ -->
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- ══════════════ STRUCTURED DATA ══════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Cashout Counter",
+      "alternateName": "bKash Cash Out Charge Calculator",
+      "operatingSystem": "Android 7.0+",
+      "applicationCategory": "FinanceApplication",
+      "description": "Free Android app to calculate bKash & Nagad cash out charges instantly — balance→cash and cash-out→total calculators, editable rates and home-screen widgets. 100% offline.",
+      "softwareVersion": "1.1.0",
+      "fileSize": "2MB",
+      "inLanguage": ["en", "bn"],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BDT" },
+      "downloadUrl": "https://github.com/Shishir-ip/Bkash-Cashout-Counter/releases/latest",
+      "author": {
+        "@type": "Person",
+        "name": "Shohidul Islam Shishir",
+        "url": "https://github.com/Shishir-ip"
+      },
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the bKash cash out charge?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Cashout Counter ships with the two main bKash rates: 13.95৳ per 1,000 for Priyo/ATM cash out and 18.50৳ per 1,000 for regular agent cash out. Rates change from time to time, so every rate in the app is editable — and you should always confirm with the official bKash app before transacting." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Nagad cash out charge?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The defaults are 12.99৳ per 1,000 for Nagad Regular and 15৳ per 1,000 for Nagad Islamic — both editable anytime inside the app." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate bKash cash out charges?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Multiply your amount by the rate and divide by 1,000. Example: cashing out ৳1,000 at 18.50৳/1000 costs ৳18.50, so ৳1,018.50 leaves your account. Cashout Counter does this instantly, in both directions." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I calculate how much cash I get from my balance?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — that's Balance mode. Enter your balance and the app shows the cash you'll receive after the charge (e.g. ৳10,000 @ 13.95 → ৳9,860.50 cash in hand)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work for Rocket, Upay or bank apps?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The math is a simple ৳-per-1,000 rate, so you can add Rocket, Upay, bank apps or any custom rate in the Rates tab." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Cashout Counter free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "100% free. No ads, no in-app purchases, no account. Open source under the MIT license." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the app need internet or my account info?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. It works fully offline, requests zero permissions and never asks for your PIN, OTP or account details. The widgets work offline too." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this an official bKash or Nagad app?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Cashout Counter is an independent utility and is not affiliated with bKash Limited, Nagad Ltd or any mobile financial service provider." }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "Cashout Counter",
+      "url": "https://shishir-ip.github.io/Bkash-Cashout-Counter/",
+      "inLanguage": ["en", "bn"],
+      "publisher": { "@type": "Person", "name": "Shohidul Islam Shishir", "url": "https://github.com/Shishir-ip" }
+    }
+  ]
+}
+</script>
+
+<style>
+/* ═══════════ Base ═══════════ */
+:root{
+  --pink:#D12053; --pink-dark:#B01A45; --pink-light:#E2136E;
+  --bg:#0B0B0D; --card:#1C1C1E; --card2:#232326; --border:#2C2C31;
+  --text:#F5F5F7; --muted:#9A9AA0; --dim:#6C6C70;
+  --radius:18px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,"Noto Sans Bengali","Noto Sans",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  *{animation:none !important}
+  html{scroll-behavior:auto}
+}
+
+/* ═══════════ Nav ═══════════ */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(11,11,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--border)}
+.nav-inner{max-width:1080px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;letter-spacing:.2px}
+.logo-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--pink-light),var(--pink-dark));display:grid;place-items:center;color:#fff;font-size:17px;font-weight:800;box-shadow:0 4px 14px rgba(209,32,83,.45)}
+.nav-spacer{flex:1}
+.lang-toggle{display:flex;background:var(--card);border:1px solid var(--border);border-radius:99px;padding:3px;gap:2px}
+.lang-btn{border:0;background:transparent;color:var(--muted);font-family:inherit;font-size:13px;font-weight:600;padding:6px 14px;border-radius:99px;cursor:pointer;transition:all .25s}
+.lang-btn.active{background:var(--pink);color:#fff;box-shadow:0 2px 10px rgba(209,32,83,.4)}
+.nav-cta{background:linear-gradient(135deg,var(--pink-light),var(--pink-dark));color:#fff;font-weight:600;font-size:14px;padding:9px 18px;border-radius:99px;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 16px rgba(209,32,83,.35)}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(209,32,83,.5)}
+
+/* ═══════════ Hero ═══════════ */
+.hero{position:relative;margin-top:0;padding:150px 0 110px;background:linear-gradient(160deg,#E2136E 0%,#D12053 45%,#B01A45 100%);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 85% 10%,rgba(255,255,255,.16),transparent),radial-gradient(ellipse 50% 45% at 10% 95%,rgba(0,0,0,.25),transparent)}
+.taka-float{position:absolute;color:rgba(255,255,255,.14);font-weight:800;user-select:none;pointer-events:none;animation:floaty 9s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-26px) rotate(8deg)}}
+.hero-inner{position:relative;text-align:center;max-width:760px;margin:0 auto;padding:0 22px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:13px;font-weight:600;letter-spacing:.4px;padding:7px 16px;border-radius:99px;margin-bottom:26px;backdrop-filter:blur(6px)}
+.hero h1{font-size:clamp(40px,7vw,64px);font-weight:800;color:#fff;letter-spacing:-.5px;line-height:1.12;text-shadow:0 4px 30px rgba(0,0,0,.25)}
+.hero .tagline{font-size:clamp(17px,2.6vw,22px);color:rgba(255,255,255,.92);margin-top:14px;font-weight:500}
+.hero .sub{font-size:16px;color:rgba(255,255,255,.82);margin:18px auto 0;max-width:600px}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:inherit;font-weight:700;font-size:16px;padding:15px 30px;border-radius:16px;cursor:pointer;border:0;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-white{background:#fff;color:var(--pink-dark);box-shadow:0 8px 26px rgba(0,0,0,.28)}
+.btn-white:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.36)}
+.btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.4)}
+.btn-ghost:hover{transform:translateY(-3px);background:rgba(255,255,255,.22)}
+.hero-stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+.stat-chip{background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);color:#fff;font-size:13px;font-weight:600;padding:8px 16px;border-radius:99px;backdrop-filter:blur(4px)}
+
+/* ═══════════ Section headers ═══════════ */
+.sec-head{text-align:center;max-width:640px;margin:0 auto 52px}
+.sec-head h2{font-size:clamp(26px,4vw,36px);font-weight:800;letter-spacing:-.4px}
+.sec-head p{color:var(--muted);margin-top:12px;font-size:16px}
+.kicker{display:inline-block;color:var(--pink-light);font-size:13px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:12px}
+
+/* ═══════════ Screenshots ═══════════ */
+.shots{display:flex;gap:26px;justify-content:center;align-items:flex-end;flex-wrap:wrap}
+.phone{width:240px;aspect-ratio:9/18.5;border-radius:34px;border:7px solid #2E2E33;overflow:hidden;background:#000;box-shadow:0 24px 60px rgba(0,0,0,.55);transition:transform .35s cubic-bezier(.2,.7,.3,1),box-shadow .35s}
+.phone:hover{transform:translateY(-12px) scale(1.02);box-shadow:0 34px 70px rgba(209,32,83,.22)}
+.phone.mid{transform:translateY(-18px)}
+.phone.mid:hover{transform:translateY(-30px) scale(1.02)}
+.phone img{width:100%;height:100%;object-fit:cover}
+
+/* ═══════════ Features ═══════════ */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.fcard{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px 24px;transition:transform .3s,border-color .3s,box-shadow .3s}
+.fcard:hover{transform:translateY(-5px);border-color:rgba(209,32,83,.55);box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.fcard .ico{width:46px;height:46px;border-radius:13px;background:rgba(209,32,83,.14);display:grid;place-items:center;font-size:21px;margin-bottom:16px}
+.fcard h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.fcard p{color:var(--muted);font-size:14.5px}
+
+/* ═══════════ How it works ═══════════ */
+.formulas{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.fml{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 26px;position:relative;overflow:hidden}
+.fml::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pink-light),var(--pink-dark))}
+.fml .mode{color:var(--pink-light);font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}
+.fml h3{font-size:19px;margin:8px 0 4px}
+.fml .q{color:var(--muted);font-size:14.5px;font-style:italic;margin-bottom:18px}
+.fml .formula{background:#0B0B0D;border:1px solid var(--border);border-radius:12px;padding:14px 16px;font-family:ui-monospace,"SF Mono",Consolas,monospace;font-size:13.5px;color:#F5F5F7;white-space:pre-wrap}
+.fml .ex{margin-top:14px;font-size:14px;color:var(--muted)}
+.fml .ex b{color:#fff}
+
+/* ═══════════ Rates table ═══════════ */
+.rate-table{max-width:560px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.rate-row{display:flex;align-items:center;justify-content:space-between;padding:17px 24px;border-bottom:1px solid var(--border)}
+.rate-row:last-child{border-bottom:0}
+.rate-row .name{font-weight:600;font-size:15.5px}
+.rate-row .val{color:var(--pink-light);font-weight:800;font-size:16px}
+.rates-note{text-align:center;color:var(--dim);font-size:13.5px;margin-top:18px}
+
+/* ═══════════ Widgets ═══════════ */
+.widget-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+@media(max-width:800px){.widget-wrap{grid-template-columns:1fr}}
+.widget-shots{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.wshot{max-width:47%;border-radius:18px;border:1px solid var(--border);overflow:hidden;transition:transform .3s}
+.wshot:hover{transform:scale(1.03)}
+.steps{counter-reset:step}
+.step{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.step:last-child{border-bottom:0}
+.step-num{flex:0 0 34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--pink-light),var(--pink-dark));color:#fff;font-weight:800;display:grid;place-items:center;font-size:15px;box-shadow:0 4px 12px rgba(209,32,83,.4)}
+.step p{color:var(--muted);font-size:15px;padding-top:5px}
+
+/* ═══════════ Download ═══════════ */
+.dl-card{background:linear-gradient(160deg,#E2136E 0%,#D12053 50%,#B01A45 100%);border-radius:26px;padding:56px 30px;text-align:center;position:relative;overflow:hidden;box-shadow:0 24px 70px rgba(209,32,83,.3)}
+.dl-card::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 55% 60% at 90% 0%,rgba(255,255,255,.18),transparent)}
+.dl-card h2{color:#fff;font-size:clamp(26px,4vw,34px);position:relative}
+.dl-card .dsub{color:rgba(255,255,255,.85);margin:10px 0 28px;font-size:15.5px;position:relative}
+.dl-card .btn{position:relative}
+.dl-steps{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:30px;position:relative}
+.dl-steps span{background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:13px;padding:7px 15px;border-radius:99px}
+
+/* ═══════════ FAQ ═══════════ */
+.faq{max-width:720px;margin:0 auto}
+details{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:12px;overflow:hidden;transition:border-color .3s}
+details[open]{border-color:rgba(209,32,83,.5)}
+summary{cursor:pointer;padding:18px 22px;font-weight:600;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--pink-light);font-size:22px;font-weight:400;transition:transform .3s;flex-shrink:0}
+details[open] summary::after{transform:rotate(45deg)}
+details .ans{padding:0 22px 20px;color:var(--muted);font-size:14.5px}
+
+/* ═══════════ About / footer ═══════════ */
+.dev-card{max-width:560px;margin:0 auto;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:36px 26px}
+.dev-avatar{width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,var(--pink-light),var(--pink-dark));display:grid;place-items:center;margin:0 auto 16px;font-size:30px;font-weight:800;color:#fff;box-shadow:0 10px 30px rgba(209,32,83,.4)}
+.dev-card h3{font-size:19px}
+.dev-card p{color:var(--muted);font-size:14.5px;margin-top:6px}
+.dev-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.pill-link{background:var(--card2);border:1px solid var(--border);color:var(--text);font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:99px;transition:all .25s}
+.pill-link:hover{border-color:var(--pink);color:var(--pink-light);transform:translateY(-2px)}
+footer{border-top:1px solid var(--border);padding:36px 0 46px;text-align:center}
+footer .links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+footer .links a{color:var(--muted);font-size:14px;transition:color .2s}
+footer .links a:hover{color:var(--pink-light)}
+footer .made{color:var(--dim);font-size:13.5px}
+footer .disc{color:var(--dim);font-size:12px;margin-top:10px;max-width:620px;margin-inline:auto}
+
+@media(max-width:640px){
+  section{padding:60px 0}
+  .hero{padding:120px 0 80px}
+  .nav-cta{display:none}
+  .phone{width:200px}
+  .wshot{max-width:100%}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top" aria-label="Cashout Counter home">
+      <span class="logo-mark">৳</span><span>Cashout Counter</span>
+    </a>
+    <span class="nav-spacer"></span>
+    <div class="lang-toggle" role="group" aria-label="Language / ভাষা">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')" aria-label="English">EN</button>
+      <button class="lang-btn" id="btn-bn" onclick="setLang('bn')" aria-label="Bangla">বাংলা</button>
+    </div>
+    <a class="nav-cta" href="#download" data-i18n="nav_dl">Download</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <span class="taka-float" style="top:14%;left:6%;font-size:64px" aria-hidden="true">৳</span>
+  <span class="taka-float" style="top:62%;left:12%;font-size:44px;animation-delay:1.6s" aria-hidden="true">৳</span>
+  <span class="taka-float" style="top:22%;right:9%;font-size:56px;animation-delay:.8s" aria-hidden="true">৳</span>
+  <span class="taka-float" style="top:66%;right:16%;font-size:38px;animation-delay:2.4s" aria-hidden="true">৳</span>
+  <span class="taka-float" style="top:40%;left:45%;font-size:30px;animation-delay:3.2s" aria-hidden="true">৳</span>
+  <div class="hero-inner">
+    <span class="hero-badge" data-i18n="hero_badge">Free • Open Source • No Ads</span>
+    <h1>Cashout Counter</h1>
+    <p class="tagline" data-i18n="hero_tag">The bKash &amp; Nagad cash out charge calculator for Android</p>
+    <p class="sub" data-i18n="hero_sub">Calculate cash out charges instantly — or find out exactly how much cash you'll receive from your balance. Editable rates, home-screen widgets, 100% offline.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-white" href="https://github.com/Shishir-ip/Bkash-Cashout-Counter/releases/latest" rel="noopener" data-i18n="hero_cta1">⬇ Download APK</a>
+      <a class="btn btn-ghost" href="https://github.com/Shishir-ip/Bkash-Cashout-Counter" rel="noopener" data-i18n="hero_cta2">★ Star on GitHub</a>
+    </div>
+    <div class="hero-stats">
+      <span class="stat-chip" data-i18n="hero_s1">100% Offline</span>
+      <span class="stat-chip" data-i18n="hero_s2">No Permissions</span>
+      <span class="stat-chip" data-i18n="hero_s3">~2 MB</span>
+      <span class="stat-chip" data-i18n="hero_s4">Android 7.0+</span>
+    </div>
+  </div>
+</header>
+
+<!-- Screenshots -->
+<section id="screens">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker">Screenshots</span>
+      <h2 data-i18n="shots_h2">Simple. Elegant. Familiar.</h2>
+      <p data-i18n="shots_sub">An iOS-inspired dark UI with the classic bKash pink — built with Kotlin &amp; Jetpack Compose.</p>
+    </div>
+    <div class="shots reveal">
+      <div class="phone"><img src="screenshots/counter.png" alt="Cashout Counter app — bKash cash out charge calculator Balance mode screen" loading="lazy"></div>
+      <div class="phone mid"><img src="screenshots/widgets.png" alt="Cashout Counter home screen widgets showing cash out charge results" loading="lazy"></div>
+      <div class="phone"><img src="screenshots/rates.png" alt="Editable bKash and Nagad cash out charge rates screen" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section id="features" style="padding-top:20px">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker">Features</span>
+      <h2 data-i18n="feat_h2">Everything you need, nothing you don't</h2>
+    </div>
+    <div class="grid reveal">
+      <div class="fcard"><div class="ico">🧮</div><h3 data-i18n="f1t">Two calculators in one</h3><p data-i18n="f1d"></p></div>
+      <div class="fcard"><div class="ico">🏠</div><h3 data-i18n="f2t">Home screen widgets</h3><p data-i18n="f2d"></p></div>
+      <div class="fcard"><div class="ico">⚡</div><h3 data-i18n="f3t">Live results</h3><p data-i18n="f3d"></p></div>
+      <div class="fcard"><div class="ico">✏️</div><h3 data-i18n="f4t">Editable &amp; custom rates</h3><p data-i18n="f4d"></p></div>
+      <div class="fcard"><div class="ico">📋</div><h3 data-i18n="f5t">Copy the breakdown</h3><p data-i18n="f5d"></p></div>
+      <div class="fcard"><div class="ico">🔒</div><h3 data-i18n="f6t">Private by design</h3><p data-i18n="f6d"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section id="how">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker">How it works</span>
+      <h2 data-i18n="how_h2">How the math works</h2>
+    </div>
+    <div class="formulas reveal">
+      <div class="fml">
+        <div class="mode" data-i18n="how_bal_t">Balance mode</div>
+        <h3 data-i18n="how_bal_h">"I have ৳10,000 — how much cash do I get?"</h3>
+        <div class="formula">charge   = (balance ÷ 1000) × rate
+received = balance − charge</div>
+        <p class="ex" data-i18n="how_bal_ex">৳10,000.00 @ 13.95৳/1000 → charge <b>৳139.50</b> → you receive <b>৳9,860.50</b></p>
+      </div>
+      <div class="fml">
+        <div class="mode" data-i18n="how_ch_t">Charge mode</div>
+        <h3 data-i18n="how_ch_h">"I want to cash out ৳1,000 — what's deducted?"</h3>
+        <div class="formula">charge = (amount ÷ 1000) × rate
+total  = amount + charge</div>
+        <p class="ex" data-i18n="how_ch_ex">৳1,000.00 @ 18.50৳/1000 → charge <b>৳18.50</b> → total <b>৳1,018.50</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Rates -->
+<section id="rates" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker">Rates</span>
+      <h2 data-i18n="rates_h2">Built-in charge rates</h2>
+      <p data-i18n="rates_sub">The most-used cash out rates in Bangladesh — and every single one is editable in the app.</p>
+    </div>
+    <div class="rate-table reveal" role="table" aria-label="Default cash out charge rates">
+      <div class="rate-row" role="row"><span class="name" data-i18n="r1">bKash Priyo / ATM</span><span class="val">13.95৳</span></div>
+      <div class="rate-row" role="row"><span class="name" data-i18n="r2">bKash Regular (Agent)</span><span class="val">18.50৳</span></div>
+      <div class="rate-row" role="row"><span class="name" data-i18n="r3">Nagad Regular</span><span class="val">12.99৳</span></div>
+      <div class="rate-row" role="row"><span class="name" data-i18n="r4">Nagad Islamic</span><span class="val">15৳</span></div>
+    </div>
+    <p class="rates-note reveal" data-i18n="rates_note">Rates change over time — always verify with the official bKash / Nagad apps before transacting.</p>
+  </div>
+</section>
+
+<!-- Widgets -->
+<section id="widgets">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker">Widgets</span>
+      <h2 data-i18n="wid_h2">Count from your home screen</h2>
+      <p data-i18n="wid_sub">Two glanceable widgets put the calculator right on your launcher — tap, type, done.</p>
+    </div>
+    <div class="widget-wrap reveal">
+      <div class="widget-shots">
+        <div class="wshot"><img src="screenshots/widgets.png" alt="Balance to cash and cash out to total home screen widgets" loading="lazy"></div>
+        <div class="wshot"><img src="screenshots/widget_input.png" alt="Widget input sheet to calculate cash out charge from home screen" loading="lazy"></div>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="step-num">1</span><p data-i18n="w1"></p></div>
+        <div class="step"><span class="step-num">2</span><p data-i18n="w2"></p></div>
+        <div class="step"><span class="step-num">3</span><p data-i18n="w3"></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Download -->
+<section id="download" style="padding-top:20px">
+  <div class="container">
+    <div class="dl-card reveal">
+      <h2 data-i18n="dl_h2">Download free</h2>
+      <p class="dsub" data-i18n="dl_sub">Android 7.0 or newer · ~2 MB · No sign-up · No permissions</p>
+      <a class="btn btn-white" href="https://github.com/Shishir-ip/Bkash-Cashout-Counter/releases/latest" rel="noopener" data-i18n="dl_btn">⬇ Download latest APK</a>
+      <div class="dl-steps">
+        <span data-i18n="dls1">1 · Get the APK from GitHub Releases</span>
+        <span data-i18n="dls2">2 · Allow "Install unknown apps" if asked</span>
+        <span data-i18n="dls3">3 · Add your widgets &amp; start counting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker">FAQ</span>
+      <h2 data-i18n="faq_h2">Frequently asked questions</h2>
+    </div>
+    <div class="faq reveal">
+      <details><summary data-i18n="q1"></summary><p class="ans" data-i18n="a1"></p></details>
+      <details><summary data-i18n="q2"></summary><p class="ans" data-i18n="a2"></p></details>
+      <details><summary data-i18n="q3"></summary><p class="ans" data-i18n="a3"></p></details>
+      <details><summary data-i18n="q4"></summary><p class="ans" data-i18n="a4"></p></details>
+      <details><summary data-i18n="q5"></summary><p class="ans" data-i18n="a5"></p></details>
+      <details><summary data-i18n="q6"></summary><p class="ans" data-i18n="a6"></p></details>
+      <details><summary data-i18n="q7"></summary><p class="ans" data-i18n="a7"></p></details>
+      <details><summary data-i18n="q8"></summary><p class="ans" data-i18n="a8"></p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Developer -->
+<section id="about" style="padding-top:0">
+  <div class="container">
+    <div class="dev-card reveal">
+      <div class="dev-avatar">S</div>
+      <h3 data-i18n="about_h2">Developed by Shohidul Islam Shishir</h3>
+      <p data-i18n="about_sub">A developer from Bangladesh building small, honest tools for everyday problems.</p>
+      <div class="dev-links">
+        <a class="pill-link" href="https://github.com/Shishir-ip" rel="noopener">GitHub</a>
+        <a class="pill-link" href="https://facebook.com/imshishr" rel="noopener">Facebook</a>
+        <a class="pill-link" href="https://github.com/Shishir-ip/Bkash-Cashout-Balance-Counter" rel="noopener" data-i18n="about_web">Web version</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="links">
+      <a href="https://github.com/Shishir-ip/Bkash-Cashout-Counter" rel="noopener">GitHub</a>
+      <a href="https://github.com/Shishir-ip/Bkash-Cashout-Counter/releases/latest" rel="noopener">Download</a>
+      <a href="https://github.com/Shishir-ip/Bkash-Cashout-Counter/blob/main/LICENSE" rel="noopener">MIT License</a>
+      <a href="https://facebook.com/imshishr" rel="noopener">Facebook</a>
+    </div>
+    <p class="made" data-i18n="footer_made">Made with ❤️ in Bangladesh</p>
+    <p class="disc" data-i18n="footer_disc">Cashout Counter is an independent app, not affiliated with bKash Limited or Nagad Ltd. bKash and Nagad are trademarks of their respective owners.</p>
+  </div>
+</footer>
+
+<script>
+/* ═══════════════ i18n ═══════════════ */
+const I18N = {
+  en: {
+    nav_dl:"Download",
+    hero_badge:"Free • Open Source • No Ads",
+    hero_tag:"The bKash & Nagad cash out charge calculator for Android",
+    hero_sub:"Calculate cash out charges instantly — or find out exactly how much cash you'll receive from your balance. Editable rates, home-screen widgets, 100% offline.",
+    hero_cta1:"⬇ Download APK", hero_cta2:"★ Star on GitHub",
+    hero_s1:"100% Offline", hero_s2:"No Permissions", hero_s3:"~2 MB", hero_s4:"Android 7.0+",
+    shots_h2:"Simple. Elegant. Familiar.",
+    shots_sub:"An iOS-inspired dark UI with the classic bKash pink — built with Kotlin & Jetpack Compose.",
+    feat_h2:"Everything you need, nothing you don't",
+    f1t:"Two calculators in one",
+    f1d:"Balance mode shows the cash you receive after the charge. Charge mode shows the total deduction for the amount you want to cash out.",
+    f2t:"Home screen widgets",
+    f2d:"Glanceable Balance → Cash and Cash Out → Total widgets. Tap, type, done — no need to open the app.",
+    f3t:"Live results",
+    f3d:"Results update as you type — no calculate button needed.",
+    f4t:"Editable & custom rates",
+    f4d:"Add, edit or delete any rate — bank apps, agent rates, new MFS services. Reset to defaults anytime.",
+    f5t:"Copy the breakdown",
+    f5d:"One tap copies the full result — balance, rate, charge, received — ready to paste anywhere.",
+    f6t:"Private by design",
+    f6d:"No permissions, no internet, no tracking. Your data stays on your device.",
+    how_h2:"How the math works",
+    how_bal_t:"Balance mode", how_ch_t:"Charge mode",
+    how_bal_h:"\"I have ৳10,000 — how much cash do I get?\"",
+    how_ch_h:"\"I want to cash out ৳1,000 — what's deducted?\"",
+    how_bal_ex:"৳10,000.00 @ 13.95৳/1000 → charge <b>৳139.50</b> → you receive <b>৳9,860.50</b>",
+    how_ch_ex:"৳1,000.00 @ 18.50৳/1000 → charge <b>৳18.50</b> → total <b>৳1,018.50</b>",
+    rates_h2:"Built-in charge rates",
+    rates_sub:"The most-used cash out rates in Bangladesh — and every single one is editable in the app.",
+    r1:"bKash Priyo / ATM", r2:"bKash Regular (Agent)", r3:"Nagad Regular", r4:"Nagad Islamic",
+    rates_note:"Rates change over time — always verify with the official bKash / Nagad apps before transacting.",
+    wid_h2:"Count from your home screen",
+    wid_sub:"Two glanceable widgets put the calculator right on your launcher — tap, type, done.",
+    w1:"Add the widget from your launcher's widget picker — or tap ＋ Balance / ＋ Charge on the app's About tab.",
+    w2:"Tap the widget — a bottom sheet slides over your home screen.",
+    w3:"Type the amount, pick a rate, hit Save — the widget updates instantly.",
+    dl_h2:"Download free",
+    dl_sub:"Android 7.0 or newer · ~2 MB · No sign-up · No permissions",
+    dl_btn:"⬇ Download latest APK",
+    dls1:"1 · Get the APK from GitHub Releases", dls2:"2 · Allow \"Install unknown apps\" if asked", dls3:"3 · Add your widgets & start counting",
+    faq_h2:"Frequently asked questions",
+    q1:"What is the bKash cash out charge?",
+    a1:"Cashout Counter ships with the two main bKash rates: 13.95৳ per 1,000 for Priyo/ATM cash out and 18.50৳ per 1,000 for regular agent cash out. Rates change from time to time, so every rate in the app is editable — and you should always confirm with the official bKash app before transacting.",
+    q2:"What is the Nagad cash out charge?",
+    a2:"The defaults are 12.99৳ per 1,000 for Nagad Regular and 15৳ per 1,000 for Nagad Islamic — both editable anytime inside the app.",
+    q3:"How do I calculate bKash cash out charges?",
+    a3:"Multiply your amount by the rate and divide by 1,000. Example: cashing out ৳1,000 at 18.50৳/1000 costs ৳18.50, so ৳1,018.50 leaves your account. Cashout Counter does this instantly — in both directions.",
+    q4:"Can I calculate how much cash I get from my balance?",
+    a4:"Yes — that's Balance mode. Enter your balance and the app shows the cash you'll receive after the charge (e.g. ৳10,000 @ 13.95 → ৳9,860.50 cash in hand).",
+    q5:"Does it work for Rocket, Upay or bank apps?",
+    a5:"Yes. The math is a simple ৳-per-1,000 rate, so you can add Rocket, Upay, bank apps or any custom rate in the Rates tab.",
+    q6:"Is Cashout Counter free?",
+    a6:"100% free. No ads, no in-app purchases, no account. Open source under the MIT license.",
+    q7:"Does the app need internet or my account info?",
+    a7:"No. It works fully offline, requests zero permissions and never asks for your PIN, OTP or account details. The widgets work offline too.",
+    q8:"Is this an official bKash or Nagad app?",
+    a8:"No. Cashout Counter is an independent utility and is not affiliated with bKash Limited, Nagad Ltd or any mobile financial service provider.",
+    about_h2:"Developed by Shohidul Islam Shishir",
+    about_sub:"A developer from Bangladesh building small, honest tools for everyday problems.",
+    about_web:"Web version",
+    footer_made:"Made with ❤️ in Bangladesh",
+    footer_disc:"Cashout Counter is an independent app, not affiliated with bKash Limited or Nagad Ltd. bKash and Nagad are trademarks of their respective owners."
+  },
+  bn: {
+    nav_dl:"ডাউনলোড",
+    hero_badge:"ফ্রি • ওপেন সোর্স • বিজ্ঞাপন নেই",
+    hero_tag:"বিকাশ ও নগদ ক্যাশ আউট চার্জ ক্যালকুলেটর — অ্যান্ড্রয়েডের জন্য",
+    hero_sub:"ক্যাশ আউট চার্জ মুহূর্তেই হিসাব করুন — অথবা জানুন ব্যালেন্স থেকে ঠিক কত টাকা হাতে পাবেন। বদলানো যায় এমন রেট, হোম স্ক্রিন উইজেট, ১০০% অফলাইন।",
+    hero_cta1:"⬇ ডাউনলোড করুন", hero_cta2:"★ GitHub-এ স্টার দিন",
+    hero_s1:"১০০% অফলাইন", hero_s2:"কোনো পারমিশন নেই", hero_s3:"মাত্র ~২ এমবি", hero_s4:"অ্যান্ড্রয়েড ৭.০+",
+    shots_h2:"সিম্পল। এলিগ্যান্ট। চেনা।",
+    shots_sub:"ক্লাসিক বিকাশ পিঙ্কে আইওএস-অনুপ্রাণিত ডার্ক ডিজাইন — Kotlin ও Jetpack Compose দিয়ে তৈরি।",
+    feat_h2:"যা দরকার সব আছে, বাড়তি কিছু নেই",
+    f1t:"এক অ্যাপে দুই ক্যালকুলেটর",
+    f1d:"ব্যালেন্স মোড দেখায় চার্জ কেটে কত ক্যাশ হাতে পাবেন; চার্জ মোড দেখায় যত টাকা ক্যাশ আউট করবেন মোট কত কাটবে।",
+    f2t:"হোম স্ক্রিন উইজেট",
+    f2d:"ব্যালেন্স → ক্যাশ এবং ক্যাশ আউট → মোট — দুটি উইজেট। ট্যাপ করুন, টাকা লিখুন, শেষ — অ্যাপ খুলতেই হবে না।",
+    f3t:"লাইভ রেজাল্ট",
+    f3d:"টাইপ করার সাথে সাথেই রেজাল্ট — ক্যালকুলেট বাটনের দরকার নেই।",
+    f4t:"রেট বদলানো ও নতুন রেট",
+    f4d:"যেকোনো রেট যোগ, এডিট বা ডিলিট করুন — ব্যাংক অ্যাপ, এজেন্ট রেট বা নতুন সার্ভিস। যখন চান ডিফল্টে ফিরে যান।",
+    f5t:"হিসাব কপি",
+    f5d:"এক ট্যাপে পুরো হিসাব কপি — ব্যালেন্স, রেট, চার্জ, প্রাপ্ত টাকা — যেকোনো জায়গায় পেস্ট করুন।",
+    f6t:"সম্পূর্ণ প্রাইভেট",
+    f6d:"কোনো পারমিশন নেই, ইন্টারনেট নেই, ট্র্যাকিং নেই। আপনার ডেটা আপনার ফোনেই থাকে।",
+    how_h2:"হিসাবটা কেমন?",
+    how_bal_t:"ব্যালেন্স মোড", how_ch_t:"চার্জ মোড",
+    how_bal_h:"\"৳১০,০০০ আছে — হাতে কত ক্যাশ পাব?\"",
+    how_ch_h:"\"৳১,০০০ ক্যাশ আউট করব — মোট কত কাটবে?\"",
+    how_bal_ex:"৳১০,০০০ @ ১৩.৯৫৳/১০০০ → চার্জ <b>৳১৩৯.৫০</b> → হাতে <b>৳৯,৮৬০.৫০</b>",
+    how_ch_ex:"৳১,০০০ @ ১৮.৫০৳/১০০০ → চার্জ <b>৳১৮.৫০</b> → মোট <b>৳১,০১৮.৫০</b>",
+    rates_h2:"বিল্ট-ইন চার্জ রেট",
+    rates_sub:"বাংলাদেশে সবচেয়ে বেশি ব্যবহৃত ক্যাশ আউট রেট — আর প্রতিটিই অ্যাপে বদলানো যায়।",
+    r1:"বিকাশ প্রিয়ো / এটিএম", r2:"বিকাশ রেগুলার (এজেন্ট)", r3:"নগদ রেগুলার", r4:"নগদ ইসলামিক",
+    rates_note:"রেট সময়ে সময়ে বদলায় — লেনদেনের আগে অফিসিয়াল বিকাশ / নগদ অ্যাপে যাচাই করে নিন।",
+    wid_h2:"হোম স্ক্রিন থেকেই হিসাব",
+    wid_sub:"দুটি উইজেট ক্যালকুলেটর পৌঁছে দেবে আপনার হোম স্ক্রিনেই — ট্যাপ, লিখুন, শেষ।",
+    w1:"লঞ্চারের উইজেট লিস্ট থেকে যোগ করুন — অথবা অ্যাপের About ট্যাবে ＋ Balance / ＋ Charge চাপুন।",
+    w2:"উইজেটে ট্যাপ করুন — হোম স্ক্রিনের উপরেই ইনপুট শিট ভেসে উঠবে।",
+    w3:"টাকা লিখুন, রেট বাছুন, Save চাপুন — উইজেট সাথে সাথে আপডেট হবে।",
+    dl_h2:"ফ্রি ডাউনলোড",
+    dl_sub:"অ্যান্ড্রয়েড ৭.০+ · মাত্র ~২ এমবি · সাইন-আপ নেই · পারমিশন নেই",
+    dl_btn:"⬇ সর্বশেষ APK ডাউনলোড",
+    dls1:"১ · GitHub Releases থেকে APK নিন", dls2:"২ · চাইলে \"অজানা অ্যাপ ইনস্টল\" অনুমতি দিন", dls3:"৩ · উইজেট যোগ করে হিসাব শুরু করুন",
+    faq_h2:"সাধারণ জিজ্ঞাসা",
+    q1:"বিকাশ ক্যাশ আউট চার্জ কত?",
+    a1:"অ্যাপে বিকাশের দুটি প্রধান রেট আছে: প্রিয়ো/এটিএম ক্যাশ আউটে প্রতি ১,০০০৳-তে ১৩.৯৫৳ এবং রেগুলার এজেন্ট ক্যাশ আউটে প্রতি ১,০০০৳-তে ১৮.৫০৳। রেট সময়ে সময়ে বদলায়, তাই অ্যাপের প্রতিটি রেট বদলানো যায় — লেনদেনের আগে অফিসিয়াল বিকাশ অ্যাপে যাচাই করুন।",
+    q2:"নগদ ক্যাশ আউট চার্জ কত?",
+    a2:"ডিফল্ট রেট: নগদ রেগুলারে প্রতি ১,০০০৳-তে ১২.৯৯৳ এবং নগদ ইসলামিকে ১৫৳ — দুটোই যখন খুশি বদলানো যায়।",
+    q3:"বিকাশ ক্যাশ আউট চার্জ কীভাবে হিসাব করব?",
+    a3:"আপনার টাকার সাথে রেট গুণ করে ১,০০০ দিয়ে ভাগ করুন। যেমন: ৳১,০০০ ক্যাশ আউটে ১৮.৫০৳/১০০০ রেটে চার্জ ৳১৮.৫০ — মোট ৳১,০১৮.৫০ কাটবে। Cashout Counter এটা মুহূর্তেই করে দেয় — দুই দিকেই।",
+    q4:"ব্যালেন্স থেকে কত ক্যাশ পাব তা হিসাব করা যায়?",
+    a4:"হ্যাঁ — এটাই ব্যালেন্স মোড। ব্যালেন্স লিখুন, অ্যাপ দেখাবে চার্জ কেটে হাতে কত পাবেন (যেমন ৳১০,০০০ @ ১৩.৯৫ → ৳৯,৮৬০.৫০)।",
+    q5:"রকেট, উপায় বা ব্যাংক অ্যাপের জন্যও কাজ করে?",
+    a5:"হ্যাঁ। হিসাবটা প্রতি ১,০০০৳ রেটের — তাই Rates ট্যাবে রকেট, উপায়, ব্যাংক অ্যাপ বা যেকোনো কাস্টম রেট যোগ করতে পারবেন।",
+    q6:"Cashout Counter কি ফ্রি?",
+    a6:"১০০% ফ্রি। বিজ্ঞাপন নেই, ইন-অ্যাপ কেনাকাটা নেই, অ্যাকাউন্ট লাগে না। MIT লাইসেন্সে ওপেন সোর্স।",
+    q7:"ইন্টারনেট বা অ্যাকাউন্ট তথ্য লাগে?",
+    a7:"না। পুরোপুরি অফলাইনে চলে, কোনো পারমিশন চায় না, আর কখনোই PIN, OTP বা অ্যাকাউন্টের তথ্য চায় না। উইজেটগুলোও অফলাইনে চলে।",
+    q8:"এটা কি অফিসিয়াল বিকাশ বা নগদ অ্যাপ?",
+    a8:"না। Cashout Counter একটি স্বাধীন অ্যাপ — বিকাশ লিমিটেড, নগদ লিমিটেড বা যেকোনো এমএফএস প্রতিষ্ঠানের সাথে কোনো সম্পর্ক নেই।",
+    about_h2:"ডেভেলপার: সোহিদুল ইসলাম শিশির",
+    about_sub:"বাংলাদেশের একজন ডেভেলপার — দৈনন্দিন সমস্যার ছোট ছোট নির্ভরযোগ্য সমাধান বানানোই ব্যস্ততা।",
+    about_web:"ওয়েব ভার্সন",
+    footer_made:"বাংলাদেশে ❤️ দিয়ে তৈরি",
+    footer_disc:"Cashout Counter একটি স্বাধীন অ্যাপ — বিকাশ লিমিটেড বা নগদ লিমিটেডের সাথে সম্পর্কিত নয়। bKash ও Nagad তাদের নিজ নিজ মালিকের ট্রেডমার্ক।"
+  }
+};
+
+function applyLang(lang){
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const v = I18N[lang][el.dataset.i18n];
+    if (v !== undefined) el.innerHTML = v;
+  });
+  document.documentElement.lang = lang === "bn" ? "bn" : "en";
+  document.getElementById("btn-en").classList.toggle("active", lang === "en");
+  document.getElementById("btn-bn").classList.toggle("active", lang === "bn");
+  try { localStorage.setItem("cc_lang", lang); } catch(e){}
+}
+function setLang(lang){ applyLang(lang); }
+(function(){
+  let saved = null;
+  try { saved = localStorage.getItem("cc_lang"); } catch(e){}
+  if (saved === "bn") applyLang("bn");
+})();
+
+/* ═══════════════ Scroll effects ═══════════════ */
+const nav = document.getElementById("nav");
+window.addEventListener("scroll", () => nav.classList.toggle("scrolled", window.scrollY > 24), {passive:true});
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add("visible"); io.unobserve(e.target); } });
+}, {threshold: .12});
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
